@@ -12,7 +12,7 @@ from tensorflow.keras import layers
 from utils import features_extractor
 
 # training data path
-BASE_PATH = Path('./data/train_data')
+BASE_PATH = Path('./data/Processed_3sec')
 
 # if 'models' folder does not exist, create it
 # if it exists, ignore the instruction and move on

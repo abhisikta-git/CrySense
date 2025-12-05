@@ -9,7 +9,7 @@ open the folder where you want to create the virtual environment
 
 #### windows
 ```
-python -m venv venv
+python -m venv env
 ```
 #### linux
 ```
