@@ -10,8 +10,8 @@ SAMPLE_RATE = 8000
 TARGET_DURATION = 3  # seconds
 TARGET_SAMPLES = SAMPLE_RATE * TARGET_DURATION
 
-input_root = "data/train_data"               # your dataset folder
-output_root = "data/Processed_3sec"       # new processed folder
+input_root = "data/train_data"          # your dataset folder
+output_root = "data/processed_3sec"     # new processed folder
 
 # Augmentation pipeline (mild for baby cries)
 augment = Compose([
@@ -38,7 +38,7 @@ for cls in os.listdir(input_root):
 
 print("\n=== Original Class Counts ===")
 for c, n in class_counts.items():
-    print(c, ":", n)
+    print(f" {c}: \t{n}")
 
 max_count = max(class_counts.values())
 

@@ -7,13 +7,14 @@ open the folder where you want to create the virtual environment
 > Note:
 > It is not advisable to set up the venv inside the main folder (CrySense folder)
 
+possive names of the virtual environment: `venv`, `env`, `.venv`, `.env`
 #### windows
 ```
-python -m venv env
+python -m venv venv
 ```
 #### linux
 ```
-python3 -m venv venv
+python3 -m venv .venv
 ```
 
 
@@ -25,7 +26,7 @@ venv\Scripts\activate.bat
 
 #### linux
 ```
-source venv/bin/activate
+source .venv/bin/activate
 ```
 ---
 

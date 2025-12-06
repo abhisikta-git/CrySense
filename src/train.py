@@ -12,7 +12,7 @@ from tensorflow.keras import layers
 from utils import features_extractor
 
 # training data path
-BASE_PATH = Path('./data/Processed_3sec')
+BASE_PATH = Path('./data/processed_3sec')
 
 # if 'models' folder does not exist, create it
 # if it exists, ignore the instruction and move on
@@ -85,7 +85,9 @@ def train_model(base_path):
     num_classes = y_onehot.shape[1]
     
     model = keras.Sequential([
-        layers.Dense(256, activation='relu', input_shape=(X_train.shape[1],)),
+        layers.Input(shape=(X_train.shape[1],)),  # Add Input layer first in modern keras
+        layers.Dense(256, activation='relu'),
+        # layers.Dense(256, activation='relu', input_shape=(X_train.shape[1],)),    # old way
         layers.Dropout(0.3),
         layers.Dense(128, activation='relu'),
         layers.Dropout(0.3),
