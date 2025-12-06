@@ -3,7 +3,11 @@
 env/
 venv/
 .archive/
-src/__pycache__/
-src/tempCodeRunnerFile.py
+__pycache__/
 outputs/
+
+*.pyc
+.DS_Store
+
+tempCodeRunnerFile.py
 todo.md
